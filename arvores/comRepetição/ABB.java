@@ -44,13 +44,14 @@ public class ABB {
         
         return s;
     }
-    public int nivel (){
+    public int nivel () {
         if (estaVazia()) return 0;
         return nivelRec(raiz);
     }
-    int nivelRec (No atual){
-        if (atual.getEsquerda() == null && atual.getDireita() == null) return 0;
-        int nivelEsq = 0 , nivelDir = 0;
+    int nivelRec (No atual) {
+        if (atual.getEsquerda() == null && atual.getDireita() == null) 
+            return 0;
+        int nivelEsq=0, nivelDir=0;
         if (atual.getEsquerda() != null)
             nivelEsq = nivelRec(atual.getEsquerda());
         if (atual.getDireita() != null)
